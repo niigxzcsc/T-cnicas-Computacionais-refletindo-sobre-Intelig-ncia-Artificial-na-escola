@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades | IA na Escola</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">🤖 IA na Escola</a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a class="ativo" href="atividades.html">Atividades</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hora de praticar! 🧩</h1>
+      <p>Teste seus conhecimentos e investigue respostas de inteligência artificial.</p>
+    </section>
+
+    <section class="painel">
+      <h2>🎮 Quiz da Inteligência Artificial</h2>
+      <p>Responda às perguntas e descubra quantos pontos consegue fazer.</p>
+      <div id="quiz" aria-live="polite"></div>
+    </section>
+
+    <section class="painel">
+      <h2>🔎 Laboratório de investigação</h2>
+      <p>
+        Cole uma resposta recebida de uma IA e utilize as perguntas
+        abaixo para refletir sobre a confiabilidade da informação.
+      </p>
+
+      <label for="respostaIA">Resposta para investigar:</label>
+      <textarea id="respostaIA" placeholder="Cole ou escreva a resposta aqui..."></textarea>
+
+      <button class="botao" onclick="analisarResposta()">Investigar</button>
+      <button class="botao" onclick="limparAnalise()">Limpar</button>
+
+      <div id="resultado" class="resultado escondido" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Aprender, investigar e pensar!</p>
+  </footer>
+</body>
+</html>
