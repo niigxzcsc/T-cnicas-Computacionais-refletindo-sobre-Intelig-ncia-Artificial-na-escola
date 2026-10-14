@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprenda a utilizar a inteligência artificial na escola de forma crítica, ética e responsável.">
+  <title>IA na Escola | Início</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">🤖 IA na Escola</a>
+    <nav>
+      <a class="ativo" href="index.html">Início</a>
+      <a href="atividades.html">Atividades</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>O futuro da aprendizagem começa com você!</h1>
+      <p>
+        Descubra como a inteligência artificial pode ajudar nos estudos,
+        sem deixar de lado a criatividade, a ética e o pensamento crítico.
+      </p>
+      <a class="botao" href="atividades.html">Começar a aprender →</a>
+    </section>
+
+    <section class="secao">
+      <h2>💡 O que você vai aprender?</h2>
+      <p>Conheça três princípios importantes para usar a tecnologia na escola.</p>
+
+      <div class="grade">
+        <article class="cartao">
+          <div class="icone">🔍</div>
+          <h3>Pensamento crítico</h3>
+          <p>Questione as respostas da IA e confira informações antes de acreditar nelas.</p>
+        </article>
+
+        <article class="cartao">
+          <div class="icone">🛡️</div>
+          <h3>Segurança digital</h3>
+          <p>Proteja seus dados pessoais e aprenda a navegar com responsabilidade.</p>
+        </article>
+
+        <article class="cartao">
+          <div class="icone">🎨</div>
+          <h3>Criatividade</h3>
+          <p>Use a tecnologia como apoio para desenvolver suas próprias ideias.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>🧠 Desafio rápido</h2>
+      <div class="painel">
+        <p>Uma IA respondeu a uma pergunta da sua tarefa. O que você deve fazer?</p>
+
+        <label class="opcao">
+          <input type="radio" name="desafio" value="a">
+          Copiar a resposta sem conferir.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="desafio" value="b">
+          Verificar as informações e compreender a resposta.
+        </label>
+
+        <label class="opcao">
+          <input type="radio" name="desafio" value="c">
+          Considerar que a IA nunca erra.
+        </label>
+
+        <button class="botao" id="verificarDesafio">Verificar</button>
+        <p id="feedbackDesafio" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>IA na Escola — Tecnologia com consciência.</p>
+    <p>Projeto educativo sobre o uso responsável da inteligência artificial.</p>
+  </footer>
+
+  <script>
+    document.getElementById("verificarDesafio").addEventListener("click", () => {
+      const escolha = document.querySelector('input[name="desafio"]:checked');
+      const feedback = document.getElementById("feedbackDesafio");
+
+      if (!escolha) {
+        feedback.textContent = "Selecione uma alternativa.";
+      } else if (escolha.value === "b") {
+        feedback.textContent = "✅ Muito bem! Sempre confira as informações.";
+      } else {
+        feedback.textContent = "💡 Tente novamente. A IA também pode cometer erros.";
+      }
+    });
+  </script>
+</body>
+</html>
