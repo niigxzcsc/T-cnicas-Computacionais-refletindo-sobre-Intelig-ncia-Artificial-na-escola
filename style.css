@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --roxo: #635bff;
+  --roxo-escuro: #3930a8;
+  --fundo: #f5f6ff;
+  --texto: #252747;
+  --branco: #ffffff;
+  --verde: #d8fbe5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--branco);
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 3px 15px #2527470d;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--roxo);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: var(--roxo);
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 35px auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #635bff, #928bff);
+  color: white;
+  border-radius: 25px;
+  padding: 55px 35px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  font-size: 1.1rem;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--roxo);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hero .botao {
+  background: white;
+  color: var(--roxo-escuro);
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  background: var(--roxo-escuro);
+  color: white;
+}
+
+.secao {
+  margin: 45px 0;
+}
+
+.secao h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.cartao {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e9e8ff;
+  box-shadow: 0 6px 20px #25274708;
+}
+
+.cartao h3 {
+  margin: 10px 0;
+}
+
+.icone {
+  font-size: 2.5rem;
+}
+
+.painel {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  margin: 25px 0;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid #deddf5;
+  border-radius: 12px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+textarea:focus,
+input:focus {
+  outline: 2px solid var(--roxo);
+}
+
+.opcao {
+  display: block;
+  background: #f5f4ff;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.opcao input {
+  margin-right: 8px;
+}
+
+.resultado {
+  padding: 18px;
+  background: #eeedff;
+  border-radius: 12px;
+  margin-top: 18px;
+}
+
+.escondido {
+  display: none;
+}
+
+.lista-dicas li {
+  margin: 12px 0 12px 22px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 50px;
+  background: #252747;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 35px 20px;
+  }
+
+  .secao h2 {
+    font-size: 1.6rem;
+  }
+}
